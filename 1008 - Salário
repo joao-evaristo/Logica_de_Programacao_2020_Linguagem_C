@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(){
+  int number, hours;
+  double gain_hour,salary;
+  
+  scanf("%i%i%lf", &number, &hours, &gain_hour);
+  salary = hours * gain_hour;
+  printf("NUMBER = %i\nSALARY = U$ %.2lf\n", number, salary);
+  return 0;
+}
