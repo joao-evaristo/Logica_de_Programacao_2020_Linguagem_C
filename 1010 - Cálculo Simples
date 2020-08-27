@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(){
+  int code_piece1,number_pieces1,code_piece2,number_pieces2;
+  double price1, price2, total;
+  scanf("%i%i%lf%i%i%lf", &code_piece1, &number_pieces1, &price1, &code_piece2, &number_pieces2, &price2);
+  total = (number_pieces1 * price1) + (number_pieces2 * price2);
+  printf("VALOR A PAGAR: R$ %.2lf\n", total);
+  return 0;
+}
