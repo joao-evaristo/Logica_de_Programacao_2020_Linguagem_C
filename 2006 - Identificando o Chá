@@ -1,0 +1,15 @@
+#include <stdio.h>
+ 
+#include <stdio.h>
+int main(){
+  int resp, gab, contador=0, i;
+  scanf("%d", &gab);
+  for(i=0; i<5; i++){
+    scanf("%d", &resp);
+    if(gab==resp){
+      contador++;
+    }
+  }
+  printf("%d\n", contador);
+  return 0;
+}
