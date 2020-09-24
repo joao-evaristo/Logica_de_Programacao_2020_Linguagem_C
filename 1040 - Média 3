@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+   double N1, N2, N3, N4, NE, MED, MEDFINAL;
+   scanf("%lf%lf%lf%lf", &N1, &N2, &N3, &N4);
+   MED = (N1*2 + N2*3 + N3*4 + N4*1) /10;
+   printf("Media: %.1lf\n", MED);
+   if (MED>=7){
+     printf("Aluno aprovado.\n");
+   }
+   else if(MED<5){
+     printf("Aluno reprovado.\n");
+   }
+   else{
+     printf("Aluno em exame.\n");
+     scanf("%lf", &NE);
+     printf("Nota do exame: %.1lf\n", NE);
+     MEDFINAL = (MED+NE)/2;
+     if(MEDFINAL>=5){
+       printf("Aluno aprovado.\n");
+       printf("Media final: %.1lf\n", MEDFINAL);
+     }
+     else{
+       printf("Aluno reprovado\n");
+       printf("Media final: %.1lf\n", MEDFINAL);
+     }
+   }
+return 0;
+}
