@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int INICIO, FIM, DURACAO;
+	scanf("%d %d", &INICIO, &FIM);
+	if (INICIO>FIM){
+    DURACAO =24 - INICIO + FIM;
+		printf("O JOGO DUROU %d HORA(S)\n", DURACAO);
+	}
+	else if (FIM>INICIO){
+    DURACAO = 24 + FIM - INICIO;
+    DURACAO = DURACAO - 24;
+		printf("O JOGO DUROU %d HORA(S)\n", DURACAO);
+	}
+  else if (INICIO==FIM){
+		printf("O JOGO DUROU 24 HORA(S)\n");
+	}
+  return 0;
+}
