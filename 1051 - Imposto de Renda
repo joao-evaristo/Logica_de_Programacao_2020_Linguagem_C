@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+	float slar, taxes;
+  scanf("%f", &slar);
+  if (slar<=2000.00){
+    printf("Isento\n");
+  }
+  else if(slar>2000 && slar<=3000){
+    taxes = (slar-2000)* 0.08;
+    printf("R$ %.2f\n", taxes);
+  }
+  else if(slar>3000 && slar<=4500){
+    taxes = 80+((slar-3000)*0.18);
+    printf("R$ %.2f\n", taxes);
+  }
+  else if(slar>4500){
+    taxes = 80+270+((slar-4500)*0.28);
+    printf("R$ %.2f\n", taxes);
+  }
+  return 0;
+}
