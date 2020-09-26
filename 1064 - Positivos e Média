@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(){
+ float  num, total, medi;
+ int i, posit;
+ for (i = 1; i <= 6; i++){
+   scanf("%f", &num);
+   if (num > 0) {
+     posit += 1;
+     total += num;
+     }
+  }
+  medi = (total / posit);
+  printf("%d valores positivos\n", posit);
+  printf("%.1f\n",medi);
+  return 0;
+}
