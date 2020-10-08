@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(){
+  int num=0, i, sumalcool=0, sumgaso=0, sumdiesel=0;
+  while (num != 1 || num != 2 || num != 3 || num != 4){
+    scanf("%d", &num);
+    if (num == 1){
+      sumalcool +=1;
+    }
+    else if (num == 2){
+      sumgaso +=1;
+    }
+    else if (num == 3){
+      sumdiesel +=1;
+    }
+    else if (num == 4){
+      break;
+    }
+  }
+  printf("MUITO OBRIGADO\nAlcool: %d\nGasolina: %d\nDiesel: %d\n", sumalcool, sumgaso, sumdiesel);
+  return 0;
+}
