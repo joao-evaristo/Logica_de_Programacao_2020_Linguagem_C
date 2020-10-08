@@ -1,0 +1,63 @@
+#include <stdio.h>
+int main()
+{
+  int i, j, k = 0, l = 0, retrn = 0, num, sumlinha, sumcoluna, instancia=1, sumquadrante=0, matriz [9][9];
+  scanf("%d",&num);
+  while(instancia<=num){ //numero de instacias criadas com matrizes
+    for(i = 0; i < 9; i++){
+      for(j = 0; j < 9; j++){
+        scanf("%d",&matriz[i][j]);
+      }
+    }
+    for(i=0; i<9; i++){ //verifica se não é uma matriz de vários 5 - linha
+      if(matriz[i][0]*matriz[i][1]*matriz[i][2]*matriz[i][3]*matriz[i][4]*matriz[i][5]*matriz[i][6]*matriz[i][7]*matriz[i][8]!=362880){
+        retrn = 1;
+      }
+    }
+    for(j=0; j<9; j++){ //verifica se não é uma matriz de vários 5 - coluna
+      if(matriz[0][j]*matriz[1][j]*matriz[2][j]*matriz[3][j]*matriz[4][j]*matriz[5][j]*matriz[6][j]*matriz[7][j]*matriz[8][j]!=362880){
+        retrn = 1;
+      }
+    }
+    for(i = 0; i < 9; i++){ //soma os elementos da linha e da coluna para verificar se da 45
+      sumlinha = 0;
+      sumcoluna = 0;
+      for(j = 0; j < 9; j++){
+        sumlinha += matriz[i][j];
+        sumcoluna += matriz[j][i];
+      }
+      if(sumlinha != 45 || sumcoluna != 45){
+        i = 9;
+        retrn = 1;
+      }
+    }
+    while(l <= 6){ // faz a verificação da soma dos quadrantes no caso da matiz 3x3
+      k=0;
+      while( k<= 6){
+        sumquadrante=0;
+        for(i=l; i < 3+l; i++){
+          for(j=k; j < 3+k; j++){
+            sumquadrante += matriz[i][j];
+          }
+        }
+        if(sumquadrante != 45){
+          retrn = 1;
+          l = 6;
+        }
+      k = k+3;
+      }
+    l = l+3;
+    }
+    if(retrn == 0){
+      printf("Instancia %d\nSIM\n\n",instancia);
+    }
+    else{
+      printf("Instancia %d\nNAO\n\n",instancia);
+    }
+  instancia++;
+  retrn=0;//reseta as variaveis para o novo loop
+  l=0;
+  k=0;
+  }
+return 0;
+}
